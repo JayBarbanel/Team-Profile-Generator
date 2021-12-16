@@ -3,6 +3,9 @@ const Manager = require("./lib/Manager")
 const Intern = require("./lib/Intern")
 const inquirer = require("inquirer")
 const employees = []
+const generateHTML = require("./src/generateHTML")
+const fs = require('fs');
+
 
 function addManager() {
     inquirer.prompt([{
@@ -48,7 +51,7 @@ function addEngineer() {
         name: 'gitHub',
     }]).then(function(data) {
         console.log(data)
-        const engineers = new Engineer(data.name, data.email, data.id, data.officeNumber)
+        const engineer = new Engineer(data.name, data.email, data.id, data.gitHub)
         employees.push(engineer)
         nextPrompt()
     })
@@ -79,6 +82,18 @@ function addIntern() {
     })
 }
 
+function quit() {
+    console.log(employees)
+    const html = generateHTML(employees)
+    writeToFile("./dist/index.html", html)
+}
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log('Success!')
+    );
+}
+
 function nextPrompt() {
     inquirer.prompt([{
         type: 'list',
@@ -87,9 +102,15 @@ function nextPrompt() {
         choices: ['Engineer', 'Intern', 'Quit']
     }]).then(function(data) {
         if (data.option == "Engineer") {
-
+            addEngineer()
+        } else if (data.option == "Intern") {
+            addIntern()
+        } else if (data.option == "Quit") {
+            quit()
         }
     })
 }
+
+
 
 addManager()
