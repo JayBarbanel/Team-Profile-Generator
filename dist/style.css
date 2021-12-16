@@ -6,3 +6,16 @@
     min-height: 100%;
     z-index: -1;
 }
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 68.5%;
+    float: right;
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+}

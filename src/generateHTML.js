@@ -5,8 +5,9 @@ function generateHTML(data) {
             const card = `
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Name: ${data[i].name}</p>
+  <div class="card-header">
+    <h5 class="card-title">${data[i].name}</h5>
+</div>
     <p class="card-text">Id: ${data[i].id}</p>
     <p class="card-text">Email: ${data[i].email}</p>
     <p class="card-text">Office Number: ${data[i].officeNumber}</p>
