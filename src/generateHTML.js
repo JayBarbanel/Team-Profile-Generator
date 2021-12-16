@@ -3,41 +3,52 @@ function generateHTML(data) {
     for (let i = 0; i < data.length; i++) {
         if (data[i].getRole() == "Manager") {
             const card = `
+            <div class="row">
+            <div class="col-sm-4">
 <div class="card" style="width: 18rem;">
-  <div class="card-body">
-  <div class="card-header">
+<div class="card-header">
     <h5 class="card-title">${data[i].name}</h5>
 </div>
     <p class="card-text">Id: ${data[i].id}</p>
-    <p class="card-text">Email: ${data[i].email}</p>
+    <p class="card-text">Email:${data[i].email}</p>
     <p class="card-text">Office Number: ${data[i].officeNumber}</p>
   </div>
 </div>
+</div>
+</div>
+
 `
             employeeCards = employeeCards + card
         } else if (data[i].getRole() == "Intern") {
             const card = `
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Name: ${data[i].name}</p>
+            <div class="row">
+            <div class="col-sm-4">   
+<div class="card m-5 bg-secondary" style="width: 18rem;">
+<div class="card-header">
+  <h5 class="card-title">${data[i].name}</h5>
+</div>
     <p class="card-text">Id: ${data[i].id}</p>
     <p class="card-text">Email: ${data[i].email}</p>
     <p class="card-text">School: ${data[i].school}</p>
   </div>
 </div>
+</div>
+
 `
             employeeCards = employeeCards + card
         } else if (data[i].getRole() == "Engineer") {
             const card = `
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Name: ${data[i].name}</p>
+            <div class="row>
+            <div class="col-sm-4">  
+<div class="card m-5 bg-secondary" style="width: 18rem;">
+<div class="card-header">
+  <h5 class="card-title">${data[i].name}</h5>
+</div>
     <p class="card-text">Id: ${data[i].id}</p>
-    <p class="card-text">Email: ${data[i].email}</p>
+    <p class="card-text">Email: <a href = "mailto:${data[i].email}"></a></p>
     <p class="card-text">Github: ${data[i].github}</p>
   </div>
+</div>
 </div>
 `
             employeeCards = employeeCards + card
@@ -52,9 +63,10 @@ function generateHTML(data) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="header"> MY TEAM</header>
 <video autoplay muted loop id="myVideo">
 <source src="./Office - 6389.mp4" type="video/mp4">
 </video>
