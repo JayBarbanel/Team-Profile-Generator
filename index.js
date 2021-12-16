@@ -27,6 +27,7 @@ function addManager() {
     }]).then(function(data) {
         console.log(data)
         const manager = new Manager(data.name, data.email, data.id, data.officeNumber)
+        console.log(manager)
         employees.push(manager)
         nextPrompt()
     })
@@ -52,6 +53,7 @@ function addEngineer() {
     }]).then(function(data) {
         console.log(data)
         const engineer = new Engineer(data.name, data.email, data.id, data.github)
+        console.log(engineer)
         employees.push(engineer)
         nextPrompt()
     })
@@ -77,6 +79,7 @@ function addIntern() {
     }]).then(function(data) {
         console.log(data)
         const intern = new Intern(data.name, data.email, data.id, data.school)
+        console.log(intern)
         employees.push(intern)
         nextPrompt()
     })

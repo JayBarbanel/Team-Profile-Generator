@@ -3,6 +3,7 @@ function generateHTML(data) {
     let employeeCards = ""
     for (let i = 0; i < data.length; i++) {
         if (data[i].getRole() == "Manager") {
+            // console.log(data[i])
             const card =
                 //This is how the html will be built once the HTML file is created.
                 `
@@ -10,6 +11,7 @@ function generateHTML(data) {
 <div class="card" style="width: 18rem;">
 <div class="card-header">
     <h5 class="card-title">${data[i].name}</h5>
+    <p class="card-text">${data[i].getRole()}</p>
 </div>
     <p class="card-text">Email: ${data[i].email}</p>
     <p class="card-text">Id: ${data[i].id}</p>
@@ -20,11 +22,13 @@ function generateHTML(data) {
 
             employeeCards = employeeCards + card
         } else if (data[i].getRole() == "Intern") {
+            // console.log(data[i])
             const card = `      
             <div class="col-sm-4">   
 <div class="card" style="width: 18rem;">
 <div class="card-header">
   <h5 class="card-title">${data[i].name}</h5>
+  <p class="card-text">${data[i].getRole()}</p>
 </div>
     <p class="card-text">Email: ${data[i].email}</p>
     <p class="card-text">Id: ${data[i].id}</p>
@@ -34,11 +38,13 @@ function generateHTML(data) {
 `
             employeeCards = employeeCards + card
         } else if (data[i].getRole() == "Engineer") {
+            // console.log(data[i])
             const card = `    
             <div class="col-sm-4">  
 <div class="card" style="width: 18rem;">
 <div class="card-header">
   <h5 class="card-title">${data[i].name}</h5>
+  <p class="card-text">${data[i].getRole()}</p>
 </div>
     <p class="card-text">Email: ${data[i].email}</p>
     <p class="card-text">Id: ${data[i].id}</p>
@@ -70,7 +76,7 @@ function generateHTML(data) {
 <source src="./Office - 6389.mp4" type="video/mp4">
 </video>
 <div class="container">
-<div  class="row">
+<div  class="row justify-content-center w-100">
    ${employeeCards}
 </div>
 </div>
