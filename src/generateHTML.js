@@ -54,6 +54,9 @@ function generateHTML(data) {
     <link rel="stylesheet" href="./dist/style.css">
 </head>
 <body>
+<video autoplay muted loop id="myVideo">
+<source src="./Office - 6389.mp4" type="video/mp4">
+</video>
    ${employeeCards}
 </body>
 </html>
