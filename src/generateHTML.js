@@ -3,7 +3,6 @@ function generateHTML(data) {
     for (let i = 0; i < data.length; i++) {
         if (data[i].getRole() == "Manager") {
             const card = `
-           
             <div class="col-sm-4">
 <div class="card" style="width: 18rem;">
 <div class="card-header">
@@ -14,16 +13,12 @@ function generateHTML(data) {
     <p class="card-text">Office Number: ${data[i].officeNumber}</p>
   </div>
 </div>
-</div>
-
-
 `
             employeeCards = employeeCards + card
         } else if (data[i].getRole() == "Intern") {
-            const card = `
-           
+            const card = `      
             <div class="col-sm-4">   
-<div class="card m-5 bg-secondary" style="width: 18rem;">
+<div class="card" style="width: 18rem;">
 <div class="card-header">
   <h5 class="card-title">${data[i].name}</h5>
 </div>
@@ -32,15 +27,12 @@ function generateHTML(data) {
     <p class="card-text">School: ${data[i].school}</p>
   </div>
 </div>
-
-
 `
             employeeCards = employeeCards + card
         } else if (data[i].getRole() == "Engineer") {
-            const card = `
-           
+            const card = `    
             <div class="col-sm-4">  
-<div class="card m-5 bg-secondary" style="width: 18rem;">
+<div class="card" style="width: 18rem;">
 <div class="card-header">
   <h5 class="card-title">${data[i].name}</h5>
 </div>
@@ -73,8 +65,8 @@ function generateHTML(data) {
 <div class="container">
 <div  class="row">
    ${employeeCards}
-   </div>
-   </div>
+</div>
+</div>
 </body>
 </html>
 `
