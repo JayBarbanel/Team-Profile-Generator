@@ -10,13 +10,13 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 .header {
@@ -36,5 +36,5 @@
 
 .card-title {
     text-align: center;
-    background-color: crimson;
+    background-color: rgb(243, 216, 12);
 }
