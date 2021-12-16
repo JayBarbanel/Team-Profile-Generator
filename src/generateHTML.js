@@ -12,6 +12,7 @@ function generateHTML(data) {
 <div class="card-header">
     <h5 class="card-title">${data[i].name}</h5>
     <p class="card-text">${data[i].getRole()}</p>
+    <i class="fas fa-mug-hot"></i>
 </div>
     <p class="card-text">Email: <a href = "mailto:${data[i].email}">${data[i].email}</a></p>
     <p class="card-text">Id: ${data[i].id}</p>
@@ -29,6 +30,7 @@ function generateHTML(data) {
 <div class="card-header">
   <h5 class="card-title">${data[i].name}</h5>
   <p class="card-text">${data[i].getRole()}</p>
+  <i class="fas fa-user-graduate"></i>
 </div>
     <p class="card-text">Email: <a href = "mailto:${data[i].email}">${data[i].email}</a></p>
     <p class="card-text">Id: ${data[i].id}</p>
@@ -45,6 +47,7 @@ function generateHTML(data) {
 <div class="card-header">
   <h5 class="card-title">${data[i].name}</h5>
   <p class="card-text">${data[i].getRole()}</p>
+  <i class="fas fa-tools"></i>
 </div>
     <p class="card-text">Email: <a href = "mailto:${data[i].email}">${data[i].email}</a></p>
     <p class="card-text">Id: ${data[i].id}</p>
@@ -69,6 +72,7 @@ function generateHTML(data) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Cormorant+Garamond:ital,wght@0,300;1,600&family=DM+Serif+Display&family=Kanit:wght@100;300&family=Nunito:wght@200&family=Thasadith:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5b3d6d23d6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="header"> MY TEAM</header>
