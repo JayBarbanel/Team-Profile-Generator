@@ -24,3 +24,5 @@ MIT
 ## Questions
 If you have any questions, feel free to reach me at github.com/jaybarbanel or email me at 
 jbarbanel531@gmail.com
+## Link to video
+https://watch.screencastify.com/v/FEaKmRvFfdQ0d9EKE7Nr
