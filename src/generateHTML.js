@@ -13,7 +13,7 @@ function generateHTML(data) {
     <h5 class="card-title">${data[i].name}</h5>
     <p class="card-text">${data[i].getRole()}</p>
 </div>
-    <p class="card-text">Email: ${data[i].email}</p>
+    <p class="card-text">Email: <a href = "mailto:${data[i].email}">${data[i].email}</a></p>
     <p class="card-text">Id: ${data[i].id}</p>
     <p class="card-text">Office Number: ${data[i].officeNumber}</p>
   </div>
@@ -30,7 +30,7 @@ function generateHTML(data) {
   <h5 class="card-title">${data[i].name}</h5>
   <p class="card-text">${data[i].getRole()}</p>
 </div>
-    <p class="card-text">Email: ${data[i].email}</p>
+    <p class="card-text">Email: <a href = "mailto:${data[i].email}">${data[i].email}</a></p>
     <p class="card-text">Id: ${data[i].id}</p>
     <p class="card-text">School: ${data[i].school}</p>
   </div>
@@ -46,9 +46,9 @@ function generateHTML(data) {
   <h5 class="card-title">${data[i].name}</h5>
   <p class="card-text">${data[i].getRole()}</p>
 </div>
-    <p class="card-text">Email: ${data[i].email}</p>
+    <p class="card-text">Email: <a href = "mailto:${data[i].email}">${data[i].email}</a></p>
     <p class="card-text">Id: ${data[i].id}</p>
-    <p class="card-text">Github: ${data[i].github}</p>
+    <p class="card-text">Github: <a href="${data[i].github}">${data[i].github}</a></p>
   </div>
 </div>
 
