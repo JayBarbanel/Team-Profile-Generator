@@ -48,10 +48,10 @@ function addEngineer() {
     }, {
         type: 'input',
         message: 'What is the Engineers Github?',
-        name: 'gitHub',
+        name: 'github',
     }]).then(function(data) {
         console.log(data)
-        const engineer = new Engineer(data.name, data.email, data.id, data.gitHub)
+        const engineer = new Engineer(data.name, data.email, data.id, data.github)
         employees.push(engineer)
         nextPrompt()
     })
@@ -73,10 +73,10 @@ function addIntern() {
     }, {
         type: 'input',
         message: 'What school did the intern go to?',
-        name: 'officeNumber',
+        name: 'school',
     }]).then(function(data) {
         console.log(data)
-        const intern = new Intern(data.name, data.email, data.id, data.officeNumber)
+        const intern = new Intern(data.name, data.email, data.id, data.school)
         employees.push(intern)
         nextPrompt()
     })
